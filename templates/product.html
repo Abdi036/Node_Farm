@@ -13,45 +13,60 @@
       }
       body {
         width: 100%;
-        height: 100vh;
+        height: 160vh;
         position: relative;
-        background: linear-gradient(to bottom right, #4cd84c, #036603df);
+        background: linear-gradient(to bottom right, #9be15d, #00e3ae);
       }
       .header {
-        border: 1px solid red;
         position: absolute;
-        left: 40%;
-        top: 10%;
-        padding: 2rem;
+        left: 35%;
+        top: 6%;
+        padding: 1rem;
+        width: 400px;
         text-align: center;
         color: #fff;
+        background: linear-gradient(to bottom, #a2f9a2ec, #55c955);
         transform: skewX(-20deg);
       }
+      .title {
+        transform: skewX(20deg);
+      }
+      .title h1 {
+        font-size: 50px;
+        font-weight: bolder;
+      }
       .container {
-        border: 1px solid red;
-        width: 40%;
+        box-shadow: -2px 3px 5px #000000b1;
+        width: 35%;
         height: auto;
-        /* background: #fff; */
+        background: #fff;
         position: absolute;
-        left: 30%;
-        top: 30%;
+        left: 32.5%;
+        top: 20%;
       }
       .fruit_pic {
-        border: 1px solid yellow;
         width: 100%;
-        height: 250px;
+        height: 350px;
         position: relative;
+        background-image: url("imgs/img-3.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
       .fruit_name {
         background-color: #74f574;
-        padding: 2rem;
+        padding: 1.5rem;
         width: 100%;
         text-align: center;
         position: absolute;
-        top: 65%;
+        top: 77%;
         color: #fff;
       }
-      .back {
+      .fruit_name h3 {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .backBtn {
         text-decoration: none;
         background-color: #fff;
         border-radius: 25px;
@@ -61,41 +76,78 @@
         top: 5%;
         left: 5%;
       }
+      .backBtn:hover {
+        transition: 0.5s;
+        background: linear-gradient(to bottom, #00e3ae, #6acc6a);
+      }
+      .Organic_Fruit {
+        color: #fff;
+        position: absolute;
+        top: -15%;
+        left: 80%;
+        background: linear-gradient(#04f7be, #74f574);
+        padding: 4rem;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transform: rotate(18deg);
+      }
+
       .fruit_detail {
-        border: 5px solid #1e467b;
         text-align: center;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px 0;
         padding: 2rem;
       }
+      .fruit_detail p {
+        font-weight: 100;
+        font-size: large;
+      }
+      .add_card_link {
+        text-decoration: none;
+      }
+
       .add_to_card {
-        background-color: #70eb70f3;
+        background-color: #70eb70;
         text-align: center;
         color: #fff;
         padding: 2rem;
         width: 105%;
-        margin-left: -17px;
+        margin-left: -13px;
         transform: skewX(-20deg);
+      }
+      .add_to_card:hover {
+        opacity: 0.9;
       }
       .add_to_card div {
         transform: skewX(20deg);
+        font-size: larger;
+        font-weight: bolder;
       }
       .description {
         padding: 2rem;
-        color: #fff;
+      }
+      .description p {
+        font-size: 15px;
+        font-weight: 100;
       }
     </style>
   </head>
   <body>
     <div class="header">
-      <h1>Node Farm</h1>
+      <div class="title">
+        <h1>Node Farm</h1>
+      </div>
     </div>
 
     <div class="container">
       <div class="fruit_pic">
-        <a class="back" href="#">Back</a>
-        <img src="" alt="Error" />
+        <div class="Organic_Fruit"><h1>Organic</h1></div>
+        <a class="backBtn" href="#">Back</a>
         <div class="fruit_name">
           <h3>Fresh Avocado</h3>
         </div>
@@ -108,9 +160,11 @@
         <p>Price 6.5$</p>
       </div>
 
-      <div class="add_to_card">
-        <div>ADD TO SHOPPING CARD(6.5$)</div>
-      </div>
+      <a href="#" class="add_card_link">
+        <div class="add_to_card">
+          <div>ADD TO SHOPPING CARD(6.5$)</div>
+        </div>
+      </a>
       <div class="description">
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
