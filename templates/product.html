@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product_Template</title>
+    <title>{%PODUCTNAME%} {%IMAGE%}</title>
     <script defer src="index.html"></script>
     <style>
       * {
@@ -136,6 +136,9 @@
         font-size: 15px;
         font-weight: 100;
       }
+      .not_organic {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -147,36 +150,27 @@
 
     <div class="container">
       <div class="fruit_pic">
-        <div class="Organic_Fruit"><h1>Organic</h1></div>
+        <div class="Organic_Fruit {%NOT_ORGANIC%}">Organic</div>
         <a class="backBtn" href="#">Back</a>
         <div class="fruit_name">
-          <h3>Fresh Avocado</h3>
+          <h3>{%PRODUCTNAME%}</h3>
         </div>
       </div>
 
       <div class="fruit_detail">
-        <p>From portugal</p>
-        <p>Vitamin B,Vitamin K</p>
-        <p>Amount 4</p>
-        <p>Price 6.5$</p>
+        <p>From {%FROM%}</p>
+        <p>{%NUTRIENTS%}</p>
+        <p>{%QUANTITY%}</p>
+        <p>{%PRICE%}$</p>
       </div>
 
       <a href="#" class="add_card_link">
         <div class="add_to_card">
-          <div>ADD TO SHOPPING CARD(6.5$)</div>
+          <div>ADD TO SHOPPING CARD({%PRICE%}$)</div>
         </div>
       </a>
       <div class="description">
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-          laudantium architecto voluptas ullam ex? Rem illum quia voluptates
-          provident omnis. Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Maiores beatae odit ullam dolorem earum fugiat recusandae, sit
-          veritatis non velit accusamus minus dolorum culpa assumenda! Saepe, ex
-          totam nemo, et nisi molestias laborum autem harum sit corporis modi
-          magni sunt a vel ab exercitationem molestiae repudiandae culpa
-          temporibus. Neque, repellendus.
-        </p>
+        <p>{%DESCRIPTION%}</p>
       </div>
     </div>
   </body>

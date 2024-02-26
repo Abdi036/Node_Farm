@@ -35,7 +35,7 @@
         font-weight: bolder;
       }
       .outer_container {
-        margin-top: 16%;
+        margin-top: 18%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -44,7 +44,7 @@
       .container {
         display: flex;
         border: 1px solid transparent;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
         transform: skewX(-20deg);
       }
       .container:hover {
@@ -81,6 +81,9 @@
       .detail:hover {
         background-color: #9be15d;
       }
+      .not_organic {
+        visibility: hidden;
+      }
     </style>
   </head>
   <body>
@@ -89,67 +92,6 @@
         <h1>Node Farm</h1>
       </div>
     </div>
-    <div class="outer_container">
-      <div class="container">
-        <div class="fruit_container fruit">🥑🥑</div>
-        <div class="fruit_container fruit_name">Fresh_Avocado</div>
-        <div class="fruit_container organic">Organic</div>
-        <div class="fruit_container amount">4 🥑</div>
-        <div class="fruit_container price">6.5$</div>
-        <a class="detail_link" href="#"
-          ><div class="fruit_container detail">DETAIL</div></a
-        >
-      </div>
-      <div class="container">
-        <div class="fruit_container fruit">🥑🥑</div>
-        <div class="fruit_container fruit_name">Fresh_Avocado</div>
-        <div class="fruit_container organic">Organic</div>
-        <div class="fruit_container amount">4 🥑</div>
-        <div class="fruit_container price">6.5$</div>
-        <a class="detail_link" href="#"
-          ><div class="fruit_container detail">DETAIL</div></a
-        >
-      </div>
-      <div class="container">
-        <div class="fruit_container fruit">🥑🥑</div>
-        <div class="fruit_container fruit_name">Fresh_Avocado</div>
-        <div class="fruit_container organic">Organic</div>
-        <div class="fruit_container amount">4 🥑</div>
-        <div class="fruit_container price">6.5$</div>
-        <a class="detail_link" href="#"
-          ><div class="fruit_container detail">DETAIL</div></a
-        >
-      </div>
-      <div class="container">
-        <div class="fruit_container fruit">🥑🥑</div>
-        <div class="fruit_container fruit_name">Fresh_Avocado</div>
-        <div class="fruit_container organic">Organic</div>
-        <div class="fruit_container amount">4 🥑</div>
-        <div class="fruit_container price">6.5$</div>
-        <a class="detail_link" href="#"
-          ><div class="fruit_container detail">DETAIL</div></a
-        >
-      </div>
-      <div class="container">
-        <div class="fruit_container fruit">🥑🥑</div>
-        <div class="fruit_container fruit_name">Fresh_Avocado</div>
-        <div class="fruit_container organic">Organic</div>
-        <div class="fruit_container amount">4 🥑</div>
-        <div class="fruit_container price">6.5$</div>
-        <a class="detail_link" href="#"
-          ><div class="fruit_container detail">DETAIL</div></a
-        >
-      </div>
-      <div class="container">
-        <div class="fruit_container fruit">🥑🥑</div>
-        <div class="fruit_container fruit_name">Fresh_Avocado</div>
-        <div class="fruit_container organic">Organic</div>
-        <div class="fruit_container amount">4 🥑</div>
-        <div class="fruit_container price">6.5$</div>
-        <a class="detail_link" href="#"
-          ><div class="fruit_container detail">DETAIL</div></a
-        >
-      </div>
-    </div>
+    <div class="outer_container">{%PRODUCT_CARDS%}</div>
   </body>
 </html>
